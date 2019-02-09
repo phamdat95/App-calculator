@@ -1,0 +1,19 @@
+<h1>Calculator</h1>
+<div>
+  <p>Enter first number:</p>
+  <input class="form" type="number" [value]="firstNumber" (change)= setFirstNumber($event.target.value)>
+  <p>Operator:
+  <select [value]="operator" (change)="setOperator($event.target.value)">
+    <option value="/">/</option>
+    <option value="+">+</option>
+    <option value="x">x</option>
+    <option value="-">-</option>
+  </select>
+  </p>
+  <p>Enter first number:</p>
+  <input class="form" type="number" [value]="secondNumber" (change)= setSecondNumber($event.target.value)>
+  <p>
+  <input type="button" value="calculator" (click)="getResult()">
+  </p>
+  <p>Result: {{result}}</p>
+</div>
